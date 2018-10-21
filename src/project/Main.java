@@ -21,9 +21,15 @@ public class Main {
 		Level level;
 		do {
 			level = new LevelBuilder().fillLevel(new Block(Color.BLACK))
-											   .createRooms(45, 10, 10, 30, 30, new Block(Color.WHITE))
+											   .createRooms(9, 10, 10, 30, 30, new Block(Color.WHITE))
 											   .smooth(new Block(Color.WHITE), new Block(Color.BLACK))
+											   .createRooms(9, 10, 10, 30, 30, new Block(Color.WHITE))
 											   .smooth(new Block(Color.WHITE), new Block(Color.BLACK))
+											   .createRooms(9, 10, 10, 30, 30, new Block(Color.WHITE))
+											   .smooth(new Block(Color.WHITE), new Block(Color.BLACK))
+											   .createRooms(9, 10, 10, 30, 30, new Block(Color.WHITE))
+											   .smooth(new Block(Color.WHITE), new Block(Color.BLACK))
+											   .createRooms(9, 10, 10, 30, 30, new Block(Color.WHITE))
 											   .smooth(new Block(Color.WHITE), new Block(Color.BLACK))
 											   .getLevel();
 		} while (level.getDensityScore(4, 4, 0.5, new Block(Color.WHITE)) < 0.85 ||
